@@ -16,7 +16,6 @@ const coronaSchema = new mongoose.Schema({
         type: String,
         required: true,
         enum: ['Pfizer', 'Moderna', 'AstraZeneca','Bharat Biotech'],
-
       },
     }],
     positiveResult: {
