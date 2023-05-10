@@ -38,3 +38,45 @@ post
 
 ![image](https://github.com/SARAHLER/Corona/assets/74296156/5487a1b5-8200-4140-8c0b-554065d7f633)
 
+-עכשיו אני רוצה ליצור פרטים בנושא הקורנה
+זאת הפונקציה
+![image](https://github.com/SARAHLER/Corona/assets/74296156/be6b3f56-229b-471f-acd8-90050eff7aad)
+![image](https://github.com/SARAHLER/Corona/assets/74296156/0e300573-a44f-43fd-98a3-ef149bfe21eb)
+
+ בפוסטמן:
+ בurl: http://localhost:5000/members/3145566456/corona +תעודת זהות
+ בפוסטמן  ב body 
+
+![image](https://github.com/SARAHLER/Corona/assets/74296156/62656c9a-556c-49c9-a34e-db021f17fab3)
+
+וקיבלנו 
+![image](https://github.com/SARAHLER/Corona/assets/74296156/673642d0-b8f9-4554-9f41-da7a86b541c2)
+
+ עכשיו נעבור קצת על הבדיקות 
+ ![image](https://github.com/SARAHLER/Corona/assets/74296156/a791f197-5c9c-407e-8df5-148fd6c6e6da)
+
+נבדוק אם אפשר להוסיף מעל 4
+
+יש לאותו חבר 4 חיסונים: אני רואים שזה אותו חבר עי הid 
+![image](https://github.com/SARAHLER/Corona/assets/74296156/5ce625ea-2bce-4024-9429-dfc9035d2b1d)
+
+
+וכאן אנו רואים  שבאמת יש לו 4 חיסונים במסד נתונים
+![image](https://github.com/SARAHLER/Corona/assets/74296156/ed985eb0-63a7-438c-a535-364972fef10f)
+
+עכשיו ננסה להוסיף לו חיסון נוסף:
+![image](https://github.com/SARAHLER/Corona/assets/74296156/65bc7420-52e0-4ffb-9896-79409f901d19)
+
+וקיבלנו:
+![image](https://github.com/SARAHLER/Corona/assets/74296156/629d6ec1-171a-469a-9cc7-6e7f2e37d84e)
+
+
+בדיקה שנניח אפשר לקבל רק פעם אחת תוצאה חיובית:
+בפוסטמן:
+![image](https://github.com/SARAHLER/Corona/assets/74296156/f54a2fe0-4d4c-4172-a5e9-33077c815379)
+
+וקיבלנו הערה:
+![image](https://github.com/SARAHLER/Corona/assets/74296156/d39eb770-72da-420e-980f-5f6258cf059c)
+
+
+
