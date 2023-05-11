@@ -1,22 +1,8 @@
 
-const express = require('express');
-const mongoose = require('mongoose');
 const Member = require('../models/member');
 const Corona = require('../models/corona');
 
-const app = express();
-app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/covid', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false
-}).then(() => {
-  console.log('Connected to database');
-}).catch((err) => {
-  console.error(`Error connecting to database: ${err.message}`);
-});
 
 exports.getAllMembers = async (req, res) => {
   try {
