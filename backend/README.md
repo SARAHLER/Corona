@@ -1,59 +1,6 @@
-
-const express = require('express');
-const mongoose = require('mongoose');
-const Member = require('../models/member');
-const Corona = require('../models/corona');
-
-const app = express();
-app.use(express.json());
-
-mongoose.connect('mongodb://localhost:27017/covid', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false
-}).then(() => {
-  console.log('Connected to database');
-}).catch((err) => {
-  console.error(`Error connecting to database: ${err.message}`);
-});
-
-exports.getAllMembers = async (req, res) => {
-  try {
-    const members = await Member.find();
-    res.json(members);
-  } catch (err) {
-    res.status(400).json({ error: err.message });
-  }
-};
-
-exports.getMemberById = async (req, res) => {
-  try {
-    const member = await Member.findOne({ id: req.params.id });
-    if (!member) {
-      return res.status(404).json({ error: 'Member not found' });
-    }
-    res.json(member);
-  } catch (err) {
-    res.status(400).json({ error: err.message });
-  }
-};
-
-exports.addMember = async (req, res) => {
-  try {
-    const member = new Member(req.body);
-    const errors = member.validateSync();
-    if (errors) {
-      const errorMessages = Object.values(errors.errors).map(error => error.message);
-      return res.status(400).json({ errors: errorMessages });
-    }
-    await member.save();
-    res.status(201).json(member);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-};
-
+//יצירת נושא קורנה חדש
+הפונקציה 
+הפונקציה :
 exports.addCoronaDetails = async (req, res) => {
   try {
     const member = await Member.findOne({ id: req.params.id });
@@ -125,3 +72,26 @@ exports.addCoronaDetails = async (req, res) => {
 };
 
 
+זה מה שרשמתי בפוסטמן:
+בurl -http://localhost:5000/members/318522234/corona
+בbody-
+image.png
+
+התוצאה שקיבלנו:
+image.png
+עכשיו נראה בdb שזה באמת נוצר:
+image.png
+בדיקות:
+1-תוצאה חיובית 
+image.png
+ההודעה:
+image.png
+תוצאה:
+image.png
+בדיקה שאפשר רק עד 4 חיסונים:
+דבר ראשון נראה שיש לו כבר 4 :
+image.png
+עכשיו ננסה להוסיף עוד אחד נוסף:
+image.png
+וקיבלנו:  
+image.png
